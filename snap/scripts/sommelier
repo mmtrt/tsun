@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TITLE="Tiberian Sun"
+TITLE="C&C: Tiberian Sun CnCNet"
 NOTICE="The ${TITLE} snap is experimental, built
 with development releases of upstream WINE and may not function as
 expected.\n\nIf you encounter issues please report them on the
@@ -29,7 +29,7 @@ function install_app() {
     # Remove Game install from tmp
     rm -r "${TMPDIR}/TiberianSun_Online"
     # Removes the cached installers
-    rm /tmp/dotnetfx.exe
+    rm -v "${TMPDIR}/${MONO_MSI}"
     rm -v "${TMPDIR}/${INSTALL_EXE}"
     rm -v "${XDG_CACHE_HOME}/wine/${MONO_MSI}"
 
